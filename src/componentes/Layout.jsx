@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Outlet, NavLink } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHome } from '@fortawesome/free-solid-svg-icons';
-import { faReact } from '@fortawesome/free-brands-svg-icons';
+import ham from './ham.svg';
+import hom from './hom.svg';
 
 import './Layout.css'
 
@@ -12,10 +11,10 @@ export const Layout = () => {
   return (
     <div className="app-container">
         <nav className='navbar'>
-            <button className='menu-btn' onClick={cambio}><FontAwesomeIcon icon={faBars} /></button>
+            <button className='menu-btn' onClick={cambio}> <img src={ham} width={50}/> </button>
             <div className='navbar-logo'><h2>Poblacion 2026</h2></div>
             <div className='navbar-items'>
-                <NavLink to='/' className="menu-btn"><FontAwesomeIcon icon={faHome} /></NavLink>
+                <NavLink to='/'><img src={hom} width={50}/></NavLink>
             </div>
         </nav>
         <div className='contenido-principal'>
