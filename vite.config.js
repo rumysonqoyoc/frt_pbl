@@ -5,7 +5,9 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] })
-  ],
+    react()],
+    build: {
+    // Cambia el minificador por defecto (lightningcss) a esbuild
+    cssMinify: 'esbuild' 
+  }
 })
